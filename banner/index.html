@@ -1,40 +1,49 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="Ru">
+
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Banner | StreamsByBen</title>
-	<link rel="icon" href="icon.png" type="images">	
-    <link rel="stylesheet" href="styles.css">
+	<link rel="icon" href="icon.png" type="images">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo:wght@300;400;700&display=swap" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>THE_MR_MES109</title>
+<style>
+
+</style>
 </head>
+
+
 <body>
-    
-    <div id="slider">
-
-        <img class="selected" 
-		     src="img/1.png" alt="">
-        <img src="img/0.png" alt="">
-        <img src="img/0.png" alt="">
-        <img src="img/0.png" alt="">
-        <img src="img/0.png" alt="">
-
-        <img src="img/2.png" alt="">		
-        <img src="img/0.png" alt="">
-        <img src="img/0.png" alt="">
-        <img src="img/0.png" alt="">
-        <img src="img/0.png" alt="">			
-		
-
-    </div>
-	<div>  </div>
-	<div>  </div>
-	<div>  </div>	
-	<div>  </div>
-	<div> БАНЕР ДЛЯ OBS PROJECTBW.RU </div> 
-	<div> КАРТИНКА 30 СЕКУНД  </div>
-	<div> ПРОМЕЖУТОК 2 МИНУТЫ </div>
-
-    <script src="script.js" ></script>
-
+	<div class="wrapper">
+		<div id="app">
+			<transition name="fade">
+				<div class="banner" :style="currentBanner.background" v-if="isVisibleBanner">
+					<div class="logo">
+						<transition name="fade">
+							<img v-if="isVisibleLogo" :src="currentBanner.img" />
+						</transition>
+					</div>
+					<div class="separator"></div>
+					<div class="texts">
+						<transition name="slide-fade">
+							<span v-if="isVisibleText" :style="`color: ${currentBanner.colorText}`"
+								v-html="currentBanner.dynamicText[0]">
+							</span>
+						</transition>
+					</div>
+				</div>
+			</transition>
+		</div>
+	</div>	
+	<script src="./js/svg.js"></script>
+    <script src="./js/vue.min.js"></script>
+    <script src="./js/banners.js"></script>
+    <script src="./js/main.js"></script>
 </body>
+
 </html>
