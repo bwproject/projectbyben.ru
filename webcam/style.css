@@ -5,7 +5,7 @@ body{
   min-height: 100vh;
   
   font-family: sans-serif;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: #fff;
 }
 
 .btn{
@@ -17,9 +17,13 @@ body{
   font-size: 2rem;
   border-radius: .125em;
   background-color: inherit;
+  height: 250px;
+  width: 400px;
+  animation-play-state: running;
+  
 }
 
-.btn::after{
+.btn::after{	
   content:'';
   position: absolute;
   z-index: -1;
