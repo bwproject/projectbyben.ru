@@ -3,8 +3,10 @@
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ОФИЦИАЛЬНЫЙ САЙТ BEN`a</title>
 <link href="css/core.css" rel="stylesheet">
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
 <link href="css/animate.css" rel="stylesheet">
 <meta name="yandex-verification" content="be852e78f299ab89">
 <link rel="icon" href="icon.png" type="images">
@@ -26,6 +28,17 @@
   --->
 	
 <style>
+html, body { min-height: 100%; }
+body { overflow-x: hidden; overflow-y: auto; }
+.pageoverlay { position: absolute; min-height: 100%; height: auto; overflow: visible; }
+.awrapper { min-height: 100vh; padding: 20px 15px 40px; }
+.border-solid:hover, .border-solid:hover font { color: #00ff00 !important; }
+@media (max-width: 767px) {
+  .lightbox { margin: 8% auto 0; width: 100%; }
+  .titles h1 { font-size: 3.5em; }
+  .media > a { margin-right: 18px; }
+  .text { padding: 0 10px; }
+  .text p { overflow-wrap: anywhere; word-break: normal; }
 }
 .time {
 	font-family: fanta;
@@ -47,28 +60,13 @@
 	document.onmousedown=click 
 	document.oncontextmenu = new Function("return false;") 
 </script>
-<script>
-	function disableWheelScroll(){
-	if (document.body.addEventListener) document.body.addEventListener('DOMMouseScroll', blockWheel, false);
-	document.body.onmousewheel = blockWheel;
-	}
-	function blockWheel(event){
-	if (!event) event = window.event;
-	if (event.stopPropagation) event.stopPropagation();
-	else event.cancelBubble = true;
-	if(event.preventDefault) event.preventDefault();
-	else event.returnValue = false;
-	}
-	disableWheelScroll();
-	</script>
 <script src="https://kit.fontawesome.com/b92a236f93.js" crossorigin="anonymous"></script>	
 
 </head>
 		
 	
 <body onmousedown="return false" onselectstart="return false">
-<style>body{overflow:hidden}</style>
-<script>disableWheelScroll();</script>
+
 <div id="star" class="video mask overlay">
 <div class="video-fallback"></div>
 <canvas class="cover"></canvas>
