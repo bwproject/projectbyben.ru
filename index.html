@@ -29,7 +29,9 @@
 <style>
 html, body { min-height: 100%; }
 body { overflow-x: hidden; overflow-y: auto; }
-.pageoverlay { position: absolute; min-height: 100%; height: auto; overflow: visible; }
+.pageoverlay { position: absolute; min-height: 100%; height: auto; overflow: visible; z-index: 1; }
+#star { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: 0; }
+#star .cover { display: block; width: 100vw; height: 100vh; }
 .awrapper { min-height: 100vh; padding: 20px 15px 40px; }
 .border-solid:hover, .border-solid:hover font { color: #00ff00 !important; }
 @media (max-width: 767px) {
