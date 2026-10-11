@@ -28,7 +28,22 @@
     body { overflow: hidden; }
     .pageoverlay { position: fixed; height: 100%; overflow-x: hidden; overflow-y: auto; -webkit-overflow-scrolling: touch; z-index: 1; }
     .awrapper { min-height: 100vh; padding: 20px 15px 40px; }
+    .border-solid {
+      display: inline-block;
+      padding: 10px 22px;
+      border: 2px solid #ff4500;
+      border-radius: 8px;
+      color: red;
+      text-decoration: none;
+      box-shadow: 0 0 10px rgba(255, 69, 0, 0.6);
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
     .border-solid:hover, .border-solid:hover font { color: #00ff00 !important; }
+    .border-solid:hover {
+      border-color: #00ff00;
+      box-shadow: 0 0 14px rgba(0, 255, 0, 0.8);
+    }
     @media (max-width: 767px) {
       .lightbox { margin: 8% auto 0; width: 100%; }
       .titles h1 { font-size: 3.5em; }
